@@ -63,8 +63,8 @@
 
     <Button
         android:id="@+id/newGame"
-        android:layout_width="109dp"
-        android:layout_height="45dp"
+        android:layout_width="211dp"
+        android:layout_height="47dp"
         android:layout_marginStart="162dp"
         android:layout_marginTop="88dp"
         android:layout_marginEnd="153dp"
@@ -75,10 +75,10 @@
         app:iconTint="@color/orange"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.539"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/opText"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="0.571"
         app:rippleColor="@color/orange" />
 
     <com.google.android.material.chip.ChipGroup

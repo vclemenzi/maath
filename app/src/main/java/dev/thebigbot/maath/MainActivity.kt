@@ -32,19 +32,19 @@ class MainActivity : AppCompatActivity() {
         new_game.visibility = View.INVISIBLE
 
         btn_yes.setOnClickListener {
-            onYesPress(it, text, score_text, new_game)
+            onYesPress(it, text, score_text, new_game, btn_no)
         }
 
         btn_no.setOnClickListener {
-            onNoPress(it, text, score_text, new_game)
+            onNoPress(it, text, score_text, new_game, btn_yes)
         }
 
         new_game.setOnClickListener {
-            onNewGamePress(it, text, score_text, new_game)
+            onNewGamePress(it, text, score_text, new_game, btn_yes, btn_no)
         }
     }
 
-    fun onYesPress(it: View, text: TextView, score_text: TextView, new_game: Button) {
+    fun onYesPress(it: View, text: TextView, score_text: TextView, new_game: Button, btn: Button) {
         if (welcome) {
             generateExpression()
 
@@ -94,14 +94,18 @@ class MainActivity : AppCompatActivity() {
             if (true_res == res) {
                 score_text.setText("Yep! That's correct!")
                 new_game.visibility = View.VISIBLE
+                btn.visibility = View.INVISIBLE
+                it.visibility = View.INVISIBLE
             } else {
                 score_text.setText("Nooo! That's not correct!")
                 new_game.visibility = View.VISIBLE
+                btn.visibility = View.INVISIBLE
+                it.visibility = View.INVISIBLE
             }
         }
     }
 
-    fun onNoPress(it: View, text: TextView, score_text: TextView, new_game: Button) {
+    fun onNoPress(it: View, text: TextView, score_text: TextView, new_game: Button, btn: Button) {
         if (welcome) {
             this.finishAffinity()
         }
@@ -130,14 +134,18 @@ class MainActivity : AppCompatActivity() {
             if (true_res !== res) {
                 score_text.setText("Yep! That's correct!")
                 new_game.visibility = View.VISIBLE
+                btn.visibility = View.INVISIBLE
+                it.visibility = View.INVISIBLE
             } else {
                 score_text.setText("Nooo! That's not correct!")
                 new_game.visibility = View.VISIBLE
+                btn.visibility = View.INVISIBLE
+                it.visibility = View.INVISIBLE
             }
         }
     }
 
-    fun onNewGamePress(it: View, text: TextView, score_text: TextView, new_game: Button) {
+    fun onNewGamePress(it: View, text: TextView, score_text: TextView, new_game: Button, btn_yes: Button, btn_no: Button) {
         generateExpression()
 
         when (op) {
@@ -160,6 +168,8 @@ class MainActivity : AppCompatActivity() {
 
         score_text.setText("")
         it.visibility = View.INVISIBLE
+        btn_yes.visibility = View.VISIBLE
+        btn_no.visibility = View.VISIBLE
     }
 
     fun generateExpression() {
