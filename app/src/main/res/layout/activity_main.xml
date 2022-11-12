@@ -8,40 +8,35 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/btn_yes"
+        android:id="@+id/btn_no"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="82dp"
-        android:layout_marginEnd="74dp"
-        android:background="@android:color/holo_green_dark"
-        android:backgroundTint="@android:color/holo_green_dark"
-        android:text="YES"
+        android:layout_marginStart="256dp"
+        android:layout_marginEnd="67dp"
+        android:backgroundTint="@color/red"
+        android:text="NO"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btn_no"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.893" />
 
     <Button
-        android:id="@+id/btn_no"
-        style="@style/Widget.AppCompat.Button"
+        android:id="@+id/btn_yes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="74dp"
-        android:layout_marginEnd="67dp"
-        android:background="@android:color/holo_red_dark"
-        android:lineSpacingExtra="8sp"
-        android:text="NO"
-        android:textColor="#FFE0B2"
+        android:layout_marginStart="82dp"
+        android:layout_marginEnd="86dp"
+        android:backgroundTint="@android:color/holo_green_dark"
+        android:text="YES"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btn_yes"
+        app:layout_constraintEnd_toStartOf="@+id/btn_no"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.893" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/opText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="178dp"
@@ -54,5 +49,50 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/scoreText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.394" />
+
+    <Button
+        android:id="@+id/newGame"
+        android:layout_width="109dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="162dp"
+        android:layout_marginTop="88dp"
+        android:layout_marginEnd="153dp"
+        android:layout_marginBottom="342dp"
+        android:backgroundTint="@color/orange"
+        android:text="New Game"
+        android:textSize="12sp"
+        app:iconTint="@color/orange"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/opText"
+        app:layout_constraintVertical_bias="0.0"
+        app:rippleColor="@color/orange" />
+
+    <com.google.android.material.chip.ChipGroup
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="202dp"
+        android:layout_marginTop="133dp"
+        android:layout_marginEnd="209dp"
+        android:layout_marginBottom="598dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </com.google.android.material.chip.ChipGroup>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
